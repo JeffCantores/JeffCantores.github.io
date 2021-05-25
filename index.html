@@ -1,10 +1,42 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
   <head>
     <meta charset="utf-8">
+
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/homepage.css">
+
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+
+    <script>
+      $(window).scroll(function() {
+          $('#animatedElement').each(function(){
+          var imagePos = $(this).offset().top;
+
+          var topOfWindow = $(window).scrollTop();
+            if (imagePos < topOfWindow+400) {
+              $(this).addClass("slideUp");
+            }
+          });
+      });
+
+      $('#animatedElement').click(function() {
+        $(this).addClass("slideUp");
+      });
+    </script>
+
+    <style>
+
+    </style>
+
     <title>Welcome!</title>
   </head>
+
   <body>
-      <h2>Hello World!</h2>
+
+
+      <div id="object" class="slideUp"><h2>Hello World!</h2></div>
+
   </body>
 </html>
