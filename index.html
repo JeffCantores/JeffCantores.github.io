@@ -14,11 +14,20 @@
   </head>
 
   <body>
-
-    <div id="object" class="slideUp">
-      <h1>HELLO WORLD</h1>
+    <div id="welcome" class="slideUp">
+      <h1>{{text}} ~!</h1>
       <h2>Hi again!</h2>
     </div>
 
+
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+          const app = new Vue({
+            el: '#welcome',
+            data: {
+              text: 'Henlo'
+            }
+          })
+      </script>
   </body>
 </html>
