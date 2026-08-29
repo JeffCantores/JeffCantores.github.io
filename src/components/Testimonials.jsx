@@ -1,4 +1,3 @@
-import React from "react";
 import { CommandLineIcon, UsersIcon } from '@heroicons/react/24/solid';
 import { testimonials } from "../data";
 

@@ -1,2 +1,63 @@
 /* ✅ Tailwind v4 Modern Import */
 @import "tailwindcss";
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(48px); /* Starts 48px to the right */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0); /* Settles in place */
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-48px); /* Starts 48px to the left */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0); /* Slides right into its normal position */
+  }
+}
+
+@keyframes fadeInTop {
+  from {
+    opacity: 0;
+    transform: translateY(-48px); /* Starts 48px above */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fades in while sliding UP from below */
+@keyframes fadeInBottom {
+  from {
+    opacity: 0;
+    transform: translateY(48px); /* Starts 48px below */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-top {
+  animation: fadeInTop 2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-fade-in-bottom {
+  animation: fadeInBottom 2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-fade-in-right {
+  animation: fadeInRight 2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-fade-in-left {
+  animation: fadeInLeft 2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
